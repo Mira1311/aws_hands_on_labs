@@ -16,7 +16,7 @@ resource "aws_security_group" "bastion_sg" {
     ingress {
         from_port = 22
         to_port = 22
-        protocol = "Allow SSH from anywhere"
+        protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"] # For real one it might be my IP but, just lab so i use 0.0.0.0/0 
     }
 
